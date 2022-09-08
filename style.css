@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  height: 100%;
+  background-color: #fffbe6;
+}
+/* 헤더 */
+.header {
+  margin: 0;
+  background-color: #356859;
+  color: #fffbe6;
+  text-shadow: 4px 4px 1px #fd5523;
+  text-align: center;
+  padding: 15px;
+}
+
+/* 네브바 */
+.nav-container {
+  margin: 0 auto;
+  background-color: #37966f;
+  padding: 10px;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0 auto;
+  -webkit-padding-start: 0;
+}
+
+.nav-item > li {
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.nav-item > li > a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-item > li > a:hover {
+  font-weight: 900;
+  color: #cefddf;
+  text-shadow: 1px 1px 1px rgb(31, 30, 99);
+}
+
+/* 메인 */
+.main-container {
+  display: flex;
+  padding: 10px;
+}
+
+aside,
+.news-sec,
+.notice-sec {
+  border: 2px solid #37966f;
+  background-color: #b9e4c97e;
+  border-radius: 20px;
+}
+
+/* 메인 - 사이드바 */
+aside {
+  float: left;
+  width: 500px;
+  padding: 10px;
+  margin: 0px 0px 10px 0px;
+}
+
+aside > iframe {
+  width: 100%;
+  border-radius: 20px;
+}
+
+aside > p {
+  color: #214d3a;
+  border-radius: 20px;
+  padding: 10px;
+  height: 150px;
+  margin: 5px 0px 0px 0px;
+}
+
+/* 메인-섹션 */
+.announce {
+  width: calc(100% - 535px);
+  float: right;
+}
+
+.news-sec,
+.notice-sec {
+  padding: 10px;
+}
+
+.news-sec {
+  margin: 0px 0px 10px 0px;
+}
+
+.news-sec > p {
+  color: #214d3a;
+}
+
+.news {
+  color: #fd5523;
+  border-bottom: 2px dotted rgba(0, 0, 0, 0.274);
+}
+
+.notice {
+  color: #fd5523;
+  border-bottom: 2px dotted rgba(0, 0, 0, 0.274);
+}
+
+.notice-item {
+  list-style: none;
+  -webkit-padding-start: 0;
+}
+
+.notice-item > li {
+  list-style-type: none;
+}
+
+.notice-item > li > a {
+  color: #214d3a;
+
+  text-decoration: none;
+}
+
+.notice-item > li ::after {
+  content: "N";
+  font-size: 13px;
+  color: aliceblue;
+  background-color: rgb(255, 160, 36);
+  padding: 0 3px;
+  border-radius: 50px;
+}
+
+/* 푸터 */
+.footer {
+  clear: both;
+  width: 100%;
+  background-color: #37966f;
+  color: black;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer > ul > li {
+  text-decoration: none;
+  text-align: center;
+  list-style-type: none;
+}
+
+/* 모바일 크기*/
+@media screen and (max-width: 576px) {
+  .nav-item {
+    display: grid;
+    grid-template-columns: 3;
+    padding: 0;
+  }
+
+  .nav-item > li {
+    margin-bottom: 5px;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 3;
+  }
+
+  .aside {
+    grid-column: 1;
+    grid-row: 1/2;
+    width: 500px;
+  }
+
+  .news-sec {
+    grid-column: 1;
+    grid-row: 2/3;
+    width: 500px;
+  }
+
+  .notice-sec {
+    grid-column: 1;
+    grid-row: 3/4;
+    width: 500px;
+    margin: 10px 0px 10px 0px;
+  }
+
+  .footer {
+    position: relative;
+  }
+}
